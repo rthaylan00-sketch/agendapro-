@@ -1,33 +1,16 @@
-alert ("auth carregado");
-import { auth } from "./firebase.js";
-
-import { signInWithEmailAndPassword } 
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-
-
-
 function login(){
 
-const email = document.getElementById("email").value;
+let email = document.getElementById("email").value;
+let senha = document.getElementById("senha").value;
 
-const senha = document.getElementById("senha").value;
+if(email === "teste@email.com" && senha === "123456"){
 
+document.getElementById("msg").innerText = "Login funcionando";
 
-signInWithEmailAndPassword(auth, email, senha)
+}else{
 
-.then(() => {
-
-window.location.href = "dashboard.html";
-
-})
-
-.catch((error) => {
-
-document.getElementById("msg").innerText = error.message;
-
-});
+document.getElementById("msg").innerText = "Email ou senha errado";
 
 }
 
-
-window.login = login;
+}
