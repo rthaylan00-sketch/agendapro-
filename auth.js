@@ -1,3 +1,4 @@
+alert ("auth carregado");
 import { auth } from "./firebase.js";
 
 import { signInWithEmailAndPassword } 
